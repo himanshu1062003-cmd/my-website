@@ -1,0 +1,745 @@
+Here is the updated HTML document with the site name changed from "VELOR" to "K.K GARMENTS" across all sections.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>K.K GARMENTS | Modern Fashion Boutique</title>
+  <!-- Google Fonts: Elegant & Modern Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #1e1e1e;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Color palette: black, white, beige, soft gold */
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --beige: #f8f5f0;
+      --soft-gold: #c9a87b;
+      --soft-gold-light: #e2cfb3;
+      --grey-light: #f1efec;
+      --shadow-sm: 0 10px 30px -12px rgba(0, 0, 0, 0.08);
+      --transition-smooth: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    /* Smooth scroll & anchor padding */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    /* Global container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: var(--black);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    .logo span {
+      color: var(--soft-gold);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--black);
+      transition: 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links a:hover {
+      color: var(--soft-gold);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: linear-gradient(135deg, #fefaf5 0%, #fffbf5 100%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-content {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .hero-content .badge {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--soft-gold);
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      display: inline-block;
+    }
+
+    .hero-content h1 {
+      font-size: 4.8rem;
+      font-weight: 600;
+      line-height: 1.1;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--black);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #3e3e3e;
+      margin-bottom: 2rem;
+      max-width: 90%;
+      font-weight: 400;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--black);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.25s;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary:hover {
+      background: var(--soft-gold);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--black);
+      color: var(--black);
+      padding: 14px 32px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.25s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      background: var(--black);
+      color: white;
+      border-color: var(--black);
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      position: relative;
+      animation: fadeInRight 1s ease-out forwards;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 550px;
+      object-fit: cover;
+      border-radius: 32px;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--black);
+      letter-spacing: -0.3px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #6b5a4b;
+      max-width: 600px;
+      margin: 0 auto 3rem auto;
+      font-weight: 400;
+    }
+
+    /* Featured Collection Grid */
+    .featured {
+      padding: 100px 0;
+      background-color: var(--white);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background: var(--beige);
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    .product-card:hover .product-img img {
+      transform: scale(1.08);
+    }
+
+    .product-info {
+      padding: 20px 18px 24px;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .product-desc {
+      font-size: 0.8rem;
+      color: #6c6c6c;
+      margin-bottom: 12px;
+      letter-spacing: 0.2px;
+    }
+
+    .product-price {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--soft-gold);
+      letter-spacing: -0.3px;
+    }
+
+    /* About Section */
+    .about {
+      background-color: var(--beige);
+      padding: 100px 0;
+    }
+
+    .about-container {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .about-img {
+      flex: 1.2;
+      min-width: 280px;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+      transition: 0.4s;
+    }
+
+    .about-img img:hover {
+      transform: scale(1.01);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .accent {
+      color: var(--soft-gold);
+    }
+
+    .about-text p {
+      margin: 1rem 0;
+      line-height: 1.6;
+      color: #2b2b2b;
+    }
+
+    .signature {
+      font-style: italic;
+      margin-top: 1.5rem;
+      font-weight: 400;
+      border-left: 3px solid var(--soft-gold);
+      padding-left: 20px;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+      background: var(--black);
+      padding: 80px 0;
+      text-align: center;
+      color: white;
+    }
+
+    .newsletter h3 {
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter p {
+      color: #d4d4d4;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      padding: 14px 20px;
+      width: 280px;
+      border: none;
+      background: white;
+      border-radius: 40px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-form button {
+      background: var(--soft-gold);
+      border: none;
+      padding: 14px 32px;
+      font-weight: 600;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+      color: black;
+    }
+
+    .newsletter-form button:hover {
+      background: #e0b68c;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #aaa;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--soft-gold);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(35px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* responsive */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-content p {
+        max-width: 100%;
+      }
+      .btn-group {
+        justify-content: center;
+      }
+      .hero-image {
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .hero-image img {
+        max-width: 80%;
+      }
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .signature {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 24px;
+      }
+      .nav-links {
+        gap: 1.2rem;
+      }
+      .hero-content h1 {
+        font-size: 3.2rem;
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .products-grid {
+        gap: 1.2rem;
+      }
+    }
+
+    /* gold accent hover subtle */
+    .product-card .product-price {
+      transition: 0.2s;
+    }
+    .product-card:hover .product-price {
+      color: #b48647;
+    }
+
+    /* scroll reveal class */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">K.K GARMENTS<span>.</span></a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Est. 2025</span>
+        <h1>Wear Confidence.</h1>
+        <p>Premium fashion for everyday style. Timeless pieces crafted for the modern individual.</p>
+        <div class="btn-group">
+          <a href="#collection" class="btn-primary">View Collection</a>
+          <a href="#contact-form-section" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://i.postimg.cc/pTjnd3tv/467126201-18292153636234905-2124572610853266287-n.jpg" alt="Fashion model showcase" 
+             onerror="this.src='https://picsum.photos/id/20/800/1000'">
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collection Section (8 products) -->
+  <section id="collection" class="featured">
+    <div class="container">
+      <h2 class="section-title reveal">Signature Edit</h2>
+      <p class="section-sub reveal">Curated essentials — from streetwear elegance to modern minimalism.</p>
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be filled dynamically through JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About The Shop Section -->
+  <section id="about" class="about">
+    <div class="container about-container">
+      <div class="about-img reveal">
+        <img src="https://picsum.photos/id/106/600/700" alt="Boutique interior" 
+             onerror="this.src='https://picsum.photos/id/30/600/700'">
+      </div>
+      <div class="about-text reveal">
+        <h3>Where fashion meets <span class="accent">soul</span></h3>
+        <p>Founded in the heart of the city, K.K GARMENTS is not just a clothing brand — it's a lifestyle. Each piece reflects a balance between raw street energy and refined tailoring. We believe in sustainable quality, timeless design, and empowering the person who wears our garments.</p>
+        <p>Our atelier works with local artisans, merging slow-fashion ethics with modern silhouettes. From structured blazers to fluid streetwear, every detail is considered.</p>
+        <div class="signature">— Crafted for the fearless, worn with intention.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter & Contact form integration -->
+  <section id="contact-form-section" class="newsletter">
+    <div class="container">
+      <h3>Join the movement</h3>
+      <p>Be the first to know about exclusive drops, early access, and seasonal lookbooks.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Your email address" id="newsEmail">
+        <button id="subscribeBtn">Subscribe →</button>
+      </div>
+      <p style="margin-top: 25px; font-size: 0.85rem;">Or reach us directly at <span style="color: #c9a87b;">hello@kkgarmnts.com</span> — we reply within 24h.</p>
+    </div>
+  </section>
+
+  <!-- Footer with Contact Links -->
+  <footer id="contact">
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">Shop Lookbook</a>
+      <a href="#">Careers</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p style="color: #777;">© 2025 K.K GARMENTS — Modern fashion boutique. All rights reserved.</p>
+  </footer>
+</main>
+
+<script>
+  // product data (8 high-end items)
+  const products = [
+    { name: "Oversized Blazer", desc: "Relaxed wool blend", price: "$289", img: "https://picsum.photos/id/20/400/500" },
+    { name: "Silk Cargo Pant", desc: "Fluid drape with pockets", price: "$179", img: "https://picsum.photos/id/96/400/500" },
+    { name: "Monochrome Hoodie", desc: "Organic cotton, gold embroidery", price: "$119", img: "https://picsum.photos/id/26/400/500" },
+    { name: "Leather Loafers", desc: "Soft-gold hardware", price: "$249", img: "https://picsum.photos/id/28/400/500" },
+    { name: "Cashmere Beanie", desc: "Warm, ribbed knit", price: "$89", img: "https://picsum.photos/id/29/400/500" },
+    { name: "Tailored Trouser", desc: "Sharp crease, beige tone", price: "$199", img: "https://picsum.photos/id/55/400/500" },
+    { name: "Minimal Tee", desc: "Pima cotton, relaxed fit", price: "$59", img: "https://picsum.photos/id/36/400/500" },
+    { name: "Gold Chain Necklace", desc: "Layered, stainless steel", price: "$109", img: "https://picsum.photos/id/0/400/500" }
+  ];
+
+  const productsGrid = document.getElementById('productsGrid');
+  if (productsGrid) {
+    products.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card reveal';
+      card.innerHTML = `
+        <div class="product-img">
+          <img src="${product.img}" alt="${product.name}" loading="lazy" onerror="this.src='https://picsum.photos/id/42/400/500'">
+        </div>
+        <div class="product-info">
+          <div class="product-title">${product.name}</div>
+          <div class="product-desc">${product.desc}</div>
+          <div class="product-price">${product.price}</div>
+        </div>
+      `;
+      productsGrid.appendChild(card);
+    });
+  }
+
+  // Smooth scroll for anchor links (additional)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Newsletter subscription alert
+  const subscribeBtn = document.getElementById('subscribeBtn');
+  if (subscribeBtn) {
+    subscribeBtn.addEventListener('click', () => {
+      const emailInput = document.getElementById('newsEmail');
+      const email = emailInput.value.trim();
+      if (email && email.includes('@') && email.includes('.')) {
+        alert(`✨ Thanks for subscribing, ${email}! Enjoy 10% off your first order.`);
+        emailInput.value = '';
+      } else {
+        alert('Please enter a valid email address to receive updates.');
+      }
+    });
+  }
+
+  // Scroll reveal animation (Intersection Observer)
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+  
+  revealElements.forEach(el => observer.observe(el));
+
+  // dynamic nav background change on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      nav.style.background = 'rgba(255, 255, 255, 0.98)';
+      nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)';
+    } else {
+      nav.style.background = 'rgba(255, 255, 255, 0.94)';
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // fixing hero image fallback if the placeholder cats doesn't suit (just making sure consistent beauty)
+  const heroImg = document.querySelector('.hero-image img');
+  if (heroImg && !heroImg.complete) {
+    heroImg.onerror = () => {
+      heroImg.src = 'https://picsum.photos/id/82/800/1000';
+    };
+  }
+  // ensure all product images have consistent fallback
+  document.querySelectorAll('.product-img img').forEach(img => {
+    img.onerror = () => {
+      img.src = 'https://picsum.photos/id/104/400/500';
+    };
+  });
+  
+  // additional smoothness for modern feel
+  if ('scrollBehavior' in document.documentElement.style === false) {
+    // polyfill not needed, but we keep modern browsers
+  }
+  
+  // Add entrance effect to hero on load (already using CSS)
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero-content, .hero-image').forEach(el => {
+      el.style.opacity = '1';
+    });
+    // initial active for any visibles on load
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
+```
